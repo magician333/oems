@@ -1,0 +1,51 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href={%static "css/bulma.min.css" %}>
+    <title>归还设备</title>
+</head>
+
+<body>
+    <div class="box" style="width:auto;margin: 0 auto; margin-top: 20px">
+        <p class="is-size-3" style="text-align: center">北部湾大学全媒体中心设备归还平台</p>
+        <center>
+            <table class="table is-striped">
+                <thead>
+                    <tr>
+                        <th style="text-align: center;">申请人</th>
+                        <th style="text-align: center;">借用设备</th>
+                        <th style="text-align: center;">借用理由</th>
+                        <th style="text-align: center;">借用时间</th>
+                        <th style="text-align: center;">联系方式</th>
+                        <th style="text-align: center;">归还设备</th>
+                    </tr>
+                </thead>
+                {% for i in orders %}
+                {% if i.is_returned == False %}
+                <tr>
+                    <td style="text-align: center;">{{i.name}}</td>
+                    <td style="text-align: center;">{{i.tools}}</td>
+                    <td style="text-align: center;">{{i.regard}}</td>
+                    <td style="text-align: center;">{{i.date}}</td>
+                    <td style="text-align: center;">{{i.phone}}</td>
+                    <td style="text-align: center;"><a href="/return/{{i.id}}" class="button is-primary">归还设备</a></td>
+                </tr>
+                
+                {% endif %}
+                
+                {% endfor %}
+
+            </table>
+        </center>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href={%static "css/bulma.min.css" %}>
+    <title>借出成功</title>
+</head>
+
+<body>
+    <div class="box" style="width:500px;margin: 0 auto; margin-top: 20px">
+        亲爱的{{name}},您已成功借出<strong>{{tools}}</strong>,请爱惜设备，按时归还哦~
+        <br />
+        <center>
+            <a href="/" class="button is-primary">返回首页</a>
+        </center>
+
+    </div>
+</body>
+
+</html>

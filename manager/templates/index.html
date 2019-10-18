@@ -1,0 +1,31 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href={%static "css/bulma.min.css" %}>
+    <title>全媒体设备使用平台</title>
+</head>
+
+<body>
+    <div class="box" style="width:500px;margin: 0 auto; margin-top: 20px">
+    <center>
+    <img src={%static 'images/logo.png' %} alt="Logo" class="image" style="width:228px;height:75px;">
+    </center>
+        
+        <p class="is-size-3" style="text-align: center">北部湾大学全媒体中心<br />设备使用平台</p>
+        {% for name,tools in content.items %}
+        <label class="label">{{name}}</label>
+        {% for i in tools %}{{i}}
+        {% endfor %}
+        {% endfor %}
+        <br />
+        <a href="/rent" class="button is-primary" style="float: left;">借用设备申请表</a>
+        <a href="/return" class="button is-primary" style="float: right;">归还设备通道</a>
+    </div>
+</body>
+
+</html>

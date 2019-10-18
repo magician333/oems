@@ -1,0 +1,44 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href={%static "css/bulma.min.css" %}>
+  <title>借用设备申请表</title>
+</head>
+
+<body>
+
+  <form action="/order/" method="post">
+    {% csrf_token %}
+    <div class="box" style="width:500px;margin: 0 auto; margin-top: 20px">
+      <p class="is-size-3" style="text-align: center">北部湾大学全媒体中心<br />借用设备申请表</p>
+      <label class="label">申请人：</label>
+      <input type="text" name="name" class="input is-small" placeholder="请填写真实姓名" required /> </br>
+      <label class="label">设备选择：</label>
+      <div style="margin-left:20px">
+        {% for name,tools in content.items %}
+        <label class="label is-small">{{name}}</label>
+        {% for i in tools %}
+        <label><input name="tool" type="checkbox" value="{{i}}" class="checkbox" />{{i}}</label>
+        {% endfor %}
+        {% endfor %}
+      </div>
+      <label class="label">借用理由：</label>
+      <input type="text" name="regard" class="input is-small" placeholder="请填写借用理由" required /> </br>
+      <label class=" label">联系方式：</label>
+      <input type="number" name="phone" class="input is-small" placeholder="请填写常用电话号码" required /> </br>
+      <label class="label">借出日期：</label>
+      <input type="date" name="date" class="input is-small" required /> <br />
+      <br />
+      <center>
+        <input type="submit" value="提交申请" onclick="click()" class=" button is-primary" id="submit">
+      </center>
+    </div>
+  </form>
+</body>
+
+</html>
