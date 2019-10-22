@@ -1,0 +1,30 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Oct 21 23:28:12 2019] ***
+compiled with version: 8.3.0 on 21 October 2019 14:54:33
+os: Linux-4.4.0-18362-Microsoft #1-Microsoft Mon Mar 18 12:02:00 PST 2019
+nodename: DESKTOP-NPHAI3Q
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /mnt/e/workspace/OEMS
+writing pidfile to uwsgi.pid    //pid文件，用于下面的脚本启动、停止该进程
+open("uwsgi.pid    //pid文件，用于下面的脚本启动、停止该进程"): No such file or directory [core/utils.c line 3616]
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Oct 21 23:28:22 2019] ***
+compiled with version: 8.3.0 on 21 October 2019 14:54:33
+os: Linux-4.4.0-18362-Microsoft #1-Microsoft Mon Mar 18 12:02:00 PST 2019
+nodename: DESKTOP-NPHAI3Q
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /mnt/e/workspace/OEMS
+writing pidfile to uwsgi.pid    //pid文件，用于下面的脚本启动、停止该进程
+open("uwsgi.pid    //pid文件，用于下面的脚本启动、停止该进程"): No such file or directory [core/utils.c line 3616]
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Oct 21 23:30:22 2019] ***
+compiled with version: 8.3.0 on 21 October 2019 14:54:33
+os: Linux-4.4.0-18362-Microsoft #1-Microsoft Mon Mar 18 12:02:00 PST 2019
+nodename: DESKTOP-NPHAI3Q
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /mnt/e/workspace/OEMS
+writing pidfile to uwsgi.pid    //pid文件，用于下面的脚本启动、停止该进程
+open("uwsgi.pid    //pid文件，用于下面的脚本启动、停止该进程"): No such file or directory [core/utils.c line 3616]
