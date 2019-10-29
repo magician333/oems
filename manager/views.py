@@ -28,7 +28,6 @@ def returned(request, order_id):
     # 将是否归还设置为True
     order = RentOrder.objects.get(id=order_id)
     used2free(order.tools.split(","))
-    print(order.tools.split(","))
     order.is_returned = True
     order.save()
     return render(request, "return_ok.html")

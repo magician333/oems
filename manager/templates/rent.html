@@ -30,7 +30,8 @@
       <label class="label">借用理由：</label>
       <input type="text" name="regard" class="input is-small" placeholder="请填写借用理由" required /> </br>
       <label class=" label">联系方式：</label>
-      <input type="number" name="phone" class="input is-small" placeholder="请填写常用电话号码" required /> </br>
+      <input type="number" name="phone" class="input is-small" placeholder="请填写常用电话号码" maxlength="11" min="10000000000"
+        max="19999999999" required /> </br>
       <label class="label">借出日期：</label>
       <input type="date" name="date" class="input is-small" required /> <br />
       <br />
